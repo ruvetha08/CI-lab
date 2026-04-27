@@ -1,0 +1,17 @@
+(defun fibonacci (n)
+  (let ((a 0)
+        (b 1)
+        (temp 0))
+    (format t "Fibonacci series:~%")
+    (dotimes (i n)
+      (format t "~d " a)
+      (setq temp (+ a b))
+      (setq a b)
+      (setq b temp))))
+
+(defun fibo ()
+  (format t "Enter number of terms: ")
+  (let ((n (read)))
+    (fibonacci n)))
+
+(fibo)
